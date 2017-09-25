@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>FreshStocker</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href='../static/styles/reset.css' rel='stylesheet' type='text/css' >
+    <link href='../static/styles/style.css' rel='stylesheet' type='text/css' >
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+
+</head>
+ 
+<body>
+    <header>
+        <div class="wrapper">
+            <h1><span class="color">Fresh</span>Stocker</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="hero-image">
+        <div class="wrapper">
+          <h2><span class="box_textshadow"><strong>Streamline</strong>
+            <br/>Your ordering needs</span></h2>
+        </div>
+    </div>
+    
+<div id="secondary-content">
+    <div class="wrapper">
+        <article style="background-image: url('../static/images/article-image-1.jpg');">
+            <div class="overlay">
+             <form action="/forecast" method="GET">
+              <h4>Generate order</h4>
+              <p><small><input type="text" id="company" name='company' placeholder="Enter company ID" autocomplete="off"></small></p>
+               <button type="submit" class="button">Forecast!</button>
+              </form>
+            </div>
+        </article>
+
+        <article style="background-image: url('../static/images/article-image-2.jpg');">
+            <div class="overlay">
+                <form  action="/stat" method="GET">
+                <h4>View company statistics</h4>
+                <p><small><input type="text" id="company" name='company' placeholder="Enter company ID" autocomplete="off"></small></p>
+                <button type="submit" class="button">Analyze!</button>
+                </form>
+            </div>
+        </article><div class="clear"></div>
+    </div>
+</div>
+    
+    
+</body>
+</html>
