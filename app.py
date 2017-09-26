@@ -3,7 +3,7 @@ import os
 import subprocess
 from subprocess import Popen, PIPE
 import pandas as pd
-import prophet-model
+import prophetmodel
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ def forecast():
   company = request.args.get('company')
   #p = Popen(["Prophet.py", str(company)], stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
   myVars = {"company_id":company}
-  query_results = exec(open('prophet-model.py').read(), myVars)
+  query_results = exec(open('prophetmodel.py').read(), myVars)
 
  # query_results=os.system("python freshStocker.py "+company)
   if (query_results.shape[0] == 0):

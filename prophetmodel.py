@@ -269,7 +269,7 @@ def getProphetPredictionGraph(fig, var_id, label, ax, forecast, observedsize, xm
     return 
 
 def main():
-    company_id = int(sys.argv[1])
+    #company_id = int(sys.argv[1])
     #list of dataframes 
     results_dfs = []
 
