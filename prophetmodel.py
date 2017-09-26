@@ -19,6 +19,8 @@ from collections import defaultdict
 from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
 from fbprophet import Prophet 
+import sys
+import os
 
 
 ##--- get all orders by company--- 
@@ -94,7 +96,8 @@ def getTopFiveItemsNotInLastOrder(df, company_id):
 
 # In[14]:
 
-def getTopFiveItemsNotInCurrentOrder(df, company_id):
+def getTopFiveItemsNotInCurrentOrder(df, trim_basket):
+    all_order_df = df
     groupbysize = all_order_df.groupby("variant_id").size().sort_values(ascending = False)
     groupMean = all_order_df.groupby("variant_id")["quantity"].mean().astype(int)
     avgQuantity = groupMean.to_dict()
@@ -169,7 +172,7 @@ def getProductDescriptors(df, filtered_on_order):
 # In[27]:
 
 def getCommonBoughtTogether(df, list_items):
-    rules = getAssociations(all_orders_over_time)
+    rules = getAssociations(df)
     rules_df = format_rules(rules)
     filtered_on_order = rules_df[rules_df['antecedants'].isin(list_items)]
     #print filtered_on_order.head()
@@ -268,9 +271,10 @@ def getProphetPredictionGraph(fig, var_id, label, ax, forecast, observedsize, xm
     ax.legend(loc=2)
     return 
 
-def main():
+def main(company_id):
     #company_id = int(sys.argv[1])
     #list of dataframes 
+    #all_orders_over_time.groupby(['company_id','variant_id']).size().reset_index().groupby(['company_id']).size().sort_values(ascending = True)
     results_dfs = []
 
     all_orders_over_time = pd.read_csv("updated_all_orders.csv")
@@ -319,6 +323,7 @@ def main():
             if (forecast_quant > 0):
                 trim_basket.append(var_id)
                 df_trim[var_id] = forecast
+                var_quantit[var_id] = forecast_quant
 
 
         numItems = len(trim_basket)

@@ -15,9 +15,9 @@ def main():
 def forecast():
   company = request.args.get('company')
   #p = Popen(["Prophet.py", str(company)], stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
-  myVars = {"company_id":company}
-  query_results = exec(open('prophetmodel.py').read(), myVars)
-
+  #myVars = {"company_id":company}
+  #query_results = exec(open('prophetmodel.py').read(), myVars)
+  query_results = prophetmodel.main(company)
  # query_results=os.system("python freshStocker.py "+company)
   if (query_results.shape[0] == 0):
         return render_template("index.html")  
