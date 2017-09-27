@@ -6,7 +6,7 @@ matplotlib==2.0.2
 numpy==1.13.1
 psycopg2==2.7.3.1
 scikit_learn==0.19.0
-cython
-pystan
+cython==0.25.2
+pystan=2.16.0.0
 fbprophet==0.1.1
 gunicorn
