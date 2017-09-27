@@ -19,11 +19,11 @@ from collections import defaultdict
 from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
 from fbprophet import Prophet 
-import sys
-import os
+#import sys
+#import os
 from flask import Flask, render_template, url_for, redirect, request
-import subprocess
-from subprocess import Popen, PIPE
+#import subprocess
+#from subprocess import Popen, PIPE
 
 
 
