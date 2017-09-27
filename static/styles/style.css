@@ -17,7 +17,7 @@ h1 {
 }
 h2 {
     font-weight: 300;
-    color: #006400;
+    color: #ff0000;
     font-size: 55px;
     text-transform: uppercase;
     text-align: center;
@@ -76,7 +76,7 @@ header h1 {
     margin-top: 3px;
 }
 header h1 .color {
-    color: #228B22;
+    color: #ff0000;
 }
 header nav {
     float: right;
@@ -95,7 +95,7 @@ header nav ul li a {
 }
 
 body h2 .box_textshadow {
-     text-shadow: 2px 2px 0px #90EE90; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+     text-shadow: 2px 2px 0px #fd8b8b; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 }
 
 #hero-image {
