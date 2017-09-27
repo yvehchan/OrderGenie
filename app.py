@@ -5,6 +5,8 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 import pandas.io.sql as psql
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import itertools
 import matplotlib.dates as mdates
