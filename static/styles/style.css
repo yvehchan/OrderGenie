@@ -95,7 +95,7 @@ header nav ul li a {
 }
 
 body h2 .box_textshadow {
-     text-shadow: 2px 2px 0px ##f9ebed; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+     text-shadow: 2px 2px 0px #444; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 }
 
 #hero-image {
