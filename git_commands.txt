@@ -1,7 +1,0 @@
-git add . 
-git commit -m "commit"
-git push heroku master
-git push origin master 
-
-fbprophet==0.1.1
-cython==0.25.2
