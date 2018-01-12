@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Forecast</title>
+      <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <link href='../static/styles/reset.css' rel='stylesheet' type='text/css' >
+      <link href='../static/styles/style.css' rel='stylesheet' type='text/css' >
+      <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body>
+    <header>
+    <div class="wrapper">
+        <h1><span class="color">Order</span>Genie!</h1>
+        <nav>
+            <ul>
+		<li><a href="index" class="more-link">Home</a></li>
+                <li><a href="project" class="more-link">Project Overview</a></li>
+                <li><a href="contact" class="more-link">About me</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <body>
+    <div class="wrapper">
+
+		<TABLE BORDER="5" CELLPADDING="4" CELLSPACING="3" >
+		</TABLE>
+
+		<TABLE BORDER="5" CELLPADDING="4" CELLSPACING="3" class = "centeralign">
+		   <TR>
+		      <TH COLSPAN="5"><BR><H3>Forecasted order for {{today_date}}: </H3>
+		      </TH>
+		   </TR>
+		   <TR>
+		      <TH></TH>
+		      <TH>Product ID</TH>
+		      <TH>Product Description</TH>
+		      <TH>Projected quantity</TH>
+                      <TH></TH>
+		   </TR>
+		   {% for p in recommend_table %}
+		   <TR ALIGN="CENTER">
+                      <TD></TD>
+		      <TD>{{ p['prodID'] }}</TD>
+		      <TD>{{ p['prodDesc']}}</TD>
+		      <TD>{{ p['quant'] }}</TD>
+                      <TD></TD>
+		   </TR>
+		   {% endfor %}
+		</TABLE>
+
+		<TABLE BORDER="5" CELLPADDING="4" CELLSPACING="3" class = "centeralign">
+		   <TR>
+		      <TH COLSPAN="5"><BR><H3>Last order placed {{last_date}}: </H3>
+		      </TH>
+		   </TR>
+		   <TR>
+		      <TH></TH>
+		      <TH>Product ID</TH>
+		      <TH>Product Description</TH>
+		      <TH>Quantity</TH>
+		      <TH></TH>
+		   </TR>
+		   {% for p in last_table %}
+		   <TR ALIGN="CENTER">
+		      <TD></TD>
+		      <TD>{{ p['prodID'] }}</TD>
+		      <TD>{{ p['prodDesc']}}</TD>
+		      <TD>{{ p['quant'] }}</TD>
+		      <TD></TD>
+		   </TR>
+		   {% endfor %}
+		</TABLE>
+
+		<TABLE BORDER="5" CELLPADDING="4" CELLSPACING="3" class = "centeralign">
+		   <TR>
+		      <TH COLSPAN="5"><BR><H3>Company favorites: </H3>
+		      </TH>
+		   </TR>
+		   <TR>
+		      <TH></TH>
+		      <TH>Product ID</TH>
+		      <TH>Product Description</TH>
+		      <TH>Avg quantity</TH>
+		      <TH></TH>
+		   </TR>
+		   {% for p in top_table %}
+		   <TR ALIGN="CENTER">
+		      <TD></TD>
+		      <TD>{{ p['prodID'] }}</TD>
+		      <TD>{{ p['prodDesc']}}</TD>
+		      <TD>{{ p['quant'] }}</TD>
+		      <TD></TD>
+		   </TR>
+		   {% endfor %}
+		</TABLE>
+
+
+		<TABLE BORDER="5" CELLPADDING="4" CELLSPACING="3" class = "centeralign">
+		   <TR>
+		      <TH COLSPAN="7"><BR><H3>Frequently bought together: </H3>
+		      </TH>
+		   </TR>
+		   <TR>
+		      <TH></TH>
+		     
+		      <TH>Product ID</TH>
+		      <TH>Product Description</TH>
+		      <TH></TH>
+		      <TH>Product ID</TH>
+		      <TH>Product Description</TH>
+		      
+		      <TH></TH>
+		   </TR>
+		   {% for p in together_table %}
+		   <div id = "just-line-break">
+		   <TR ALIGN="CENTER">
+		      <TD></TD>
+		    
+		      <TD><div id = "just-line-break">{{ p['prodID1'] }}</div></TD>
+		      <TD><div id = "just-line-break">{{ p['prodDesc1']}}</div></TD>
+		      <TD></TD>
+		      <TD><div id = "just-line-break">{{ p['prodID2'] }}</div></TD>
+		      <TD><div id = "just-line-break">{{ p['prodDesc2']}}</div></TD>
+		    
+		      <TD></TD>
+		   </TR>
+		</div>
+		   {% endfor %}
+		</TABLE>
+
+
+    </div>
+    </body>
+
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="../static/js/bootstrap.min.js"></script>
+
+
+     </div><!-- /.container -->
+
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="static/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
