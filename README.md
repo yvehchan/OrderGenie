@@ -1,8 +1,8 @@
 # OrderGenie - Demand forecasting and product recommendation system 
 
-##Insight Data Science Consulting project for Oh My Green, B2B kitchen concerige service 
+## Insight Data Science Consulting project for Oh My Green, B2B kitchen concerige service 
 
-##Goal: 
+## Goal: 
 
 Dual function order generation system using machine learning algoritms written in Python: 
 
@@ -10,20 +10,24 @@ Dual function order generation system using machine learning algoritms written i
 
 2. recommend additional products using association mining analysis
 
-##Tools: 
+## Tools: 
 
-..*PostgreSQL
+..* PostgreSQL
 
-..*Python 
+..* Python 
 
-..*Flask
+..* Flask
 
 
-##Description of project: https://goo.gl/oW83Ct
+## Description of project: 
+https://goo.gl/oW83Ct
 
-##Demo of program: OrderGenie-demo.ipynb
+## Demo of program: 
+OrderGenie-demo.ipynb
 
-##Main script: app.py
+## Main script: 
+app.py
 
-##Data: updated_all_orders.csv
+## Data: 
+updated_all_orders.csv
 
