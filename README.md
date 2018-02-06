@@ -12,11 +12,9 @@ Dual function order generation system using machine learning algoritms written i
 
 ## Tools: 
 
-..* PostgreSQL
-
-..* Python 
-
-..* Flask
+  * PostgreSQL
+  * Python 
+  * Flask
 
 
 ## Description of project: 
